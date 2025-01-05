@@ -40,7 +40,7 @@ export default function Person() {
                     <li className=""><h1 className='text-base font-semibold'>Gender</h1></li>
                     <li className="mb-5">{actor.gender == 2 ? 'Male' : 'Female'}</li>
                     <li className=""><h1 className='text-base font-semibold'>Birthday</h1></li>
-                    <li className="mb-5">{actor.birthday} ({age} years old)</li>
+                    <li className="mb-5">{actor.birthday ? `${actor.birthday} (${age} years old)` : 'No date'}</li>
                     <li className=""><h1 className='text-base font-semibold'>Place of Birth</h1></li>
                     <li className="mb-5">{actor.place_of_birth}</li>
                     <li className=""><h1 className="text-base font-semibold">Also Known As</h1></li>
