@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.header_section {
+  background-image: image-set(url(https://media.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter\(duotone,00192f,00baff\)/ctxm191q5o3axFzQsvNPlbKoSYv.jpg)1x,url(https://media.themoviedb.org/t/p/w3840_and_h1200_multi_faces_filter\(duotone,00192f,00baff\)/ctxm191q5o3axFzQsvNPlbKoSYv.jpg)2x);
+  background-position: center;
+  background-size: cover;
+}
+.swiper_section{
+  background-image: url(https://media.themoviedb.org/t/p/w1920_and_h427_multi_faces/3RRIFxy4RXdf0nvgUoc6joTgIYw.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.after::after {
+  content: "";
+  width: 60px;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.589) 60%,
+    rgb(255, 255, 255) 100%
+  );
+  pointer-events: none;
+  z-index: 30;
+}
+:root {
+  --color-fg: #2563eb;
+  --color-bg: #bfdbfe;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.329);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-fg); 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:active{
+  background: #2564eb8f;
+}
+.wrapper::-webkit-scrollbar{
+  height: 10px;
+}
+.wrapper::-webkit-scrollbar-thumb{
+  background-color: rgba(128, 128, 128, 0.788);
+}
+.container{
+  margin: 0 auto !important;
+  width: 80% !important;
+  max-width: 1440px;
+}
