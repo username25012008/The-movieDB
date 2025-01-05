@@ -29,6 +29,8 @@ export default function Person() {
         person()
         movie()
     }, [])
+    console.log(actor);
+    
     return (
         <div className='container flex py-8 justify-between font-sans-new gap-7'>
             <div className="w-3/12">
@@ -40,18 +42,18 @@ export default function Person() {
                     <li className=""><h1 className='text-base font-semibold'>Gender</h1></li>
                     <li className="mb-5">{actor.gender == 2 ? 'Male' : 'Female'}</li>
                     <li className=""><h1 className='text-base font-semibold'>Birthday</h1></li>
-                    <li className="mb-5">{actor.birthday ? `${actor.birthday} (${age} years old)` : 'No date'}</li>
+                    <li className="mb-5">{actor.birthday ? `${actor.birthday} (${age} years old)` : 'Unknown'}</li>
                     <li className=""><h1 className='text-base font-semibold'>Place of Birth</h1></li>
-                    <li className="mb-5">{actor.place_of_birth}</li>
+                    <li className="mb-5">{actor.place_of_birth ? `${actor.place_of_birth}`: 'Unknown'}</li>
                     <li className=""><h1 className="text-base font-semibold">Also Known As</h1></li>
-                    <li className=''>{actor.also_known_as ? actor.also_known_as.join(", ") : ''}</li>
+                    <li className=''>{actor.also_known_as && actor.also_known_as.length > 0  ? actor.also_known_as.join(", ") : 'Unknown'}</li>
                 </ul>
             </div>
 
             <div className="w-9/12 text-black">
                 <h1 className='text-4xl font-semibold'>{actor.name}</h1>
                 <h3 className='text-xl font-semibold mt-5 mb-2'>Biography</h3>
-                <p className='text-base'>{actor.biography}</p>
+                <p className='text-base'>{actor.biography ? actor.biography : 'Unknown'}</p>
                 <h3 className='text-xl font-semibold mt-5 mb-2'>Known For</h3>
                 <div className="flex overflow-hidden w-full after overflow-x-auto wrapper gap-3">
                     {movies.map((item) => (
