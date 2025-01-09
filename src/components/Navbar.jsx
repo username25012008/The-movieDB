@@ -12,19 +12,19 @@ export default function Navbar() {
             items: [
                 {
                     key: '1',
-                    label: (<Link>Популярные</Link>)
+                    label: (<Link to='/movie/popular'>Популярные</Link>)
                 },
                 {
                     key: '2',
-                    label: (<Link>Смотрят сейчаc</Link>)
+                    label: (<Link to='/movie/now_playing'>Смотрят сейчаc</Link>)
                 },
                 {
                     key: '3',
-                    label: <Link>Ожидаемые</Link>
+                    label: <Link to='/movie/upcoming'>Ожидаемые</Link>
                 },
                 {
                     key: '4',
-                    label: (<Link>Лучшие</Link>)
+                    label: (<Link to='/movie/top_rated'>Лучшие</Link>)
                 }
             ]
         },
@@ -34,19 +34,19 @@ export default function Navbar() {
             items: [
                 {
                     key: '1',
-                    label: (<Link>Популярные</Link>)
+                    label: (<Link to='/tv/popular'>Популярные</Link>)
                 },
                 {
                     key: '2',
-                    label: (<Link>В эфире сегодня</Link>)
+                    label: (<Link to='/tv/airing_today'>В эфире сегодня</Link>)
                 },
                 {
                     key: '3',
-                    label: (<Link>По телевидению</Link>)
+                    label: (<Link to='/tv/on_the_air'>По телевидению</Link>)
                 },
                 {
                     key: '4',
-                    label: (<Link>Лучшие</Link>)
+                    label: (<Link to='/tv/top_rated'>Лучшие</Link>)
                 }
             ]
         },
@@ -83,16 +83,16 @@ export default function Navbar() {
             ]
         },
     ];
-    
+
     return (
         <>
-            <nav className='bg-darkblue flex font-sans-new sticky z-50 top-0 shadow-xl'>
-                <div className="container px-7 py-1 flex justify-between items-center">
+            <nav className='bg-darkblue flex font-sans-new sticky z-50 top-0 shadow-lg'>
+                <div className="container py-1 flex justify-between items-center">
                     <div className="left_bar flex justify-between items-center gap-5">
                         <Link to='/'><img src={logo} alt="logotip" className='w-[154px] h-[20px]' /></Link>
                         <ul className='py-2 flex gap-2'>
                             {menuItems.map((item) => (
-                                <Dropdown menu={{ items:item.items }} key={item.key}>
+                                <Dropdown menu={{ items: item.items }} key={item.key}>
                                     <a onClick={(e) => e.preventDefault()}>
                                         <Space className="text-white p-2 text-base font-semibold cursor-pointer">{item.title}</Space>
                                     </a>
