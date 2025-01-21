@@ -4,9 +4,9 @@ export default function Footer() {
     return (
         <>
             <footer className='bg-darkblue'>
-                <div className="font-sans-new container flex gap-10 justify-center items-center">
+                <div className=" container flex gap-10 justify-center items-center">
                     <div className="">
-                        <div className="flex justify-end "><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="logo"  className='w-[130px]'/></div>
+                        <div className="flex justify-end "><img src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg" alt="logo" className='w-[130px]' /></div>
                         <h1 className='text-lg text-[#01B4E4] font-bold bg-white rounded-md py-2 px-4 mt-10'>Привет, User_25_01!</h1>
                     </div>
                     <div className="flex gap-10 py-20">

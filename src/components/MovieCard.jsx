@@ -5,6 +5,7 @@ import { PiDotsThreeCircleFill } from 'react-icons/pi';
 import { FaBookmark, FaHeart, FaList } from 'react-icons/fa';
 import { MdOutlineStar } from 'react-icons/md';
 import useDateFormatter from '../hooks/useDateFormatter';
+import { Link } from 'react-router-dom';
 
 export default function HomeCard({ id, title, poster_path, release_date, vote_average }) {
     const [tripleDot, setTripleDot] = useState(false)
@@ -49,7 +50,7 @@ export default function HomeCard({ id, title, poster_path, release_date, vote_av
         },
     ];
     return (
-        <div>
+        <Link to={`/mtv/${id}`}>
             <div className="card relative overflow-hidden">
                 <img
                     src={'https://media.themoviedb.org/t/p/w220_and_h330_face' + poster_path}
@@ -59,7 +60,7 @@ export default function HomeCard({ id, title, poster_path, release_date, vote_av
                 <div className="card-content relative px-3 py-7">
                     <h1 className="card-title text-base font-bold text-black">{title}</h1>
                     <p className="card-date text-base text-[#00000099]">{formatDate(release_date)}</p>
-                    <div className="w-[35px] h-[35px] absolute top-[-20px] z-10 left-3 bg-darkblue rounded-full font-sans-new">
+                    <div className="w-[35px] h-[35px] absolute top-[-20px] z-10 left-3 bg-darkblue rounded-full ">
                         <Flat
                             progress={vote_average}
                             showMiniCircle={false}
@@ -87,6 +88,6 @@ export default function HomeCard({ id, title, poster_path, release_date, vote_av
                 </Dropdown>
                 <div className={`bl w-[180px] h-full absolute top-0 rounded-lg z-20 ${tripleDot == id ? '' : 'translate-y-full'} bg-gradient-to-t from-black/30 via-black/50 to-transparent backdrop-blur-lg`}></div>
             </div>
-        </div>
+        </Link>
     )
 }

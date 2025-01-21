@@ -6,5 +6,10 @@ export default function useDateFormatter() {
     let full_date = date[1] + ' ' + date[2] + ' ' + date[3]
     return full_date
   }
-  return { formatDate }
+  const formatDate_v2 = (release_date) => {
+    const date = release_date.split('-')
+    let full_date = date[1] + '/'+date[2] + '/' + date[0]
+    return full_date
+  }
+  return { formatDate, formatDate_v2 }
 }

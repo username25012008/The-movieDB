@@ -5,10 +5,10 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <>
+    <div className='font-sans-new'>
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   )
 }

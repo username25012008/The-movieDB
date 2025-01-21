@@ -30,7 +30,7 @@ export default function Popular() {
                 <HashLoader color="#032541" size={100} />
             </div> : <div className="grid grid-cols-4 gap-5 pb-7">
                 {pData?.results?.map((item) => (
-                    <Link to={`/person/${item.id}`} key={item.id} className='col-span-1 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_60px_-12px] font-sans-new rounded-t-lg border border-[#00000028]'><Card image={item.profile_path} name={item.name} about={item.known_for} /></Link>
+                    <Link to={`/person/${item.id}`} key={item.id} className='col-span-1 shadow-[rgba(0,_0,_0,_0.25)_0px_0px_60px_-12px]  rounded-t-lg border border-[#00000028]'><Card image={item.profile_path} name={item.name} about={item.known_for} /></Link>
                 ))}
             </div>}
             <div className="flex justify-center my-7">

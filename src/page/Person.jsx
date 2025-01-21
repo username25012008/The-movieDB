@@ -29,7 +29,7 @@ export default function Person() {
         movie()
     }, [])
     return (
-        <div className='container flex py-8 justify-between font-sans-new gap-7'>
+        <div className='container flex py-8 justify-between  gap-7'>
             <div className="w-3/12">
                 <img src={'https://media.themoviedb.org/t/p/w300_and_h450_bestv2' + actor.profile_path} alt="person" className='rounded-lg w-full' />
                 <ul className='text-black'>
@@ -66,7 +66,7 @@ export default function Person() {
                                         <div className="flex items-center justify-center bg-gray-200 rounded-lg w-full h-[195px]">
                                             <p className="text-xs text-gray-500">No Image</p>
                                         </div>
-                                        <h1 className="text-sm pt-2 pb-1">{item.title || item.name}</h1>
+                                        <h1 className="text-sm pt-2 pb-1">{item?.title || item?.name }</h1>
                                     </>
                                 )}
                             </div>
